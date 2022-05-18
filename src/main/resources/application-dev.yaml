@@ -1,9 +1,12 @@
+database: mariadb
 spring:
-  config:
-    activate:
-      on-profile: dev
   datasource:
     url: jdbc:mariadb://localhost:3306/dazzle
     username: root
     password: wowls8373
     driver-class-name: org.mariadb.jdbc.Driver
+  sql:
+    init:
+      schema-locations: classpath*:db/${database}/schema.sql
+      # data-locations: classpath*:db/${database}/data.sql
+      mode: always
