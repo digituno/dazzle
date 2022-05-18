@@ -1,9 +1,8 @@
-DROP TABLE board IF EXISTS;
+drop table if exists board;
 create table board
 (
     id      int auto_increment,
-    title   varchar2(200) not null,
-    content text          not null,
-    constraint board_pk
-        primary key (id)
+    title   varchar(200) not null,
+    content text         not null,
+    primary key (id)
 );
